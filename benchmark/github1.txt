@@ -1,0 +1,10 @@
+BenchmarkFormat/method-12              2276696              2637 ns/op           0.38 MB/s         704 B/op         60 allocs/op
+BenchmarkFormat/method-12              2268352              2637 ns/op           0.38 MB/s         704 B/op         60 allocs/op
+BenchmarkFormat/method-12              2284990              2653 ns/op           0.38 MB/s         704 B/op         60 allocs/op
+BenchmarkFormat/method-12              2267804              2641 ns/op           0.38 MB/s         704 B/op         60 allocs/op
+BenchmarkFormat/method-12              2266641              2645 ns/op           0.38 MB/s         704 B/op         60 allocs/op
+BenchmarkFormat/method-12              2261485              2633 ns/op           0.38 MB/s         704 B/op         60 allocs/op
+BenchmarkFormat/method-12              2259590              2651 ns/op           0.38 MB/s         704 B/op         60 allocs/op
+BenchmarkFormat/method-12              2256315              2632 ns/op           0.38 MB/s         704 B/op         60 allocs/op
+BenchmarkFormat/method-12              2254988              2646 ns/op           0.38 MB/s         704 B/op         60 allocs/op
+BenchmarkFormat/method-12              2273128              2640 ns/op           0.38 MB/s         704 B/op         60 allocs/op
