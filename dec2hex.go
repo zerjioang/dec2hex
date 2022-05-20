@@ -1,6 +1,6 @@
 package dec2hex
 
-type HexWrap [16]byte
+type HexWrap [16]uint8
 
 type Hex []byte
 
@@ -23,14 +23,12 @@ func FormatDst(dst *HexWrap, n uint64) Hex {
 		return Hex("0")
 	}
 	var idx uint8 = 16
-	for q := n; q > 0; q = q / 16 {
+	_ = dst[15]
+	for q := n; q > 0; q >>= 4 {
 		m := q % 16
+		dst[idx-1] = uint8(48 + m)
 		if m > 9 {
-			// write hexadecimal alpha byte
-			dst[idx-1] = byte('7' + m)
-		} else {
-			// write hexadecimal numeric byte
-			dst[idx-1] = byte('0' + m)
+			dst[idx-1] += 7
 		}
 		idx--
 	}

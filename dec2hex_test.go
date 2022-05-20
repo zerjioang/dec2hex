@@ -1,6 +1,7 @@
 package dec2hex
 
 import (
+	"fmt"
 	"github.com/stretchr/testify/assert"
 	"github.com/zerjioang/easypprof"
 	"math"
@@ -39,15 +40,23 @@ func TestFormat(t *testing.T) {
 	t.Run("ours-format-dst", func(t *testing.T) {
 		// max
 		var dst HexWrap
-		assert.Equal(t, FormatDst(&dst, uint64(maxInt64)), "7FFFFFFFFFFFFFFF")
+		assert.Equal(t, FormatDst(&dst, uint64(maxInt64)).String(), "7FFFFFFFFFFFFFFF")
 		// min
-		assert.Equal(t, FormatDst(&dst, 0), "0")
+		assert.Equal(t, FormatDst(&dst, 0).String(), "0")
 	})
 	t.Run("profile", func(t *testing.T) {
-		var dst HexWrap
-		easypprof.Profile(t, 500000000, func() {
-			FormatDst(&dst, uint64(maxInt64))
-		})
+		if false {
+			var dst HexWrap
+			easypprof.Profile(t, 500000000, func() {
+				FormatDst(&dst, uint64(maxInt64))
+			})
+		}
+	})
+	t.Run("shift", func(t *testing.T) {
+		var n = 512
+		fmt.Println(n)
+		fmt.Println(512 >> 4)
+		assert.Equal(t, 512>>4, 32)
 	})
 }
 
