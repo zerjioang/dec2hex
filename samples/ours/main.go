@@ -1,7 +1,7 @@
 package main
 
 import (
-	"dec2hex"
+	"github/zerjioang/dec2hex"
 	"log"
 	"time"
 )
