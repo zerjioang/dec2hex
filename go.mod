@@ -1,4 +1,4 @@
-module dec2hex
+module github.com/zerjioang/dec2hex
 
 go 1.18
 
